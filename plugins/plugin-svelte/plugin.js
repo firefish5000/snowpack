@@ -58,7 +58,7 @@ module.exports = function plugin(snowpackConfig, pluginOptions = {}) {
   return {
     name: '@snowpack/plugin-svelte',
     resolve: {
-      input: ['.svelte'],
+      input: pluginOptions.input ?? ['.svelte'],
       output: ['.js', '.css'],
     },
     knownEntrypoints: [
